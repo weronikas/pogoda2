@@ -26,7 +26,7 @@ public class TransparentTileOWM implements TileProvider {
     private Paint opacityPaint = new Paint();
     private String tileType;
 
-    private static final String OWM_TILE_URL = "http://tile.openweathermap.org/map/%s/%d/%d/%d.png";
+    private static final String OWM_TILE_URL = "http://tile.openweathermap.org/map/%s/%d/%d/%d.png?appid=d79f2c360afb48b8837de5c38fb91dcf";
 
     /**
      * This constructor assumes the <code>url</code> parameter contains three placeholders for the x- and y-positions of
@@ -38,7 +38,7 @@ public class TransparentTileOWM implements TileProvider {
     public TransparentTileOWM(String tileType)
     {
         this.tileType = tileType;
-        setOpacity(50);
+        setOpacity(80);
     }
 
     /**

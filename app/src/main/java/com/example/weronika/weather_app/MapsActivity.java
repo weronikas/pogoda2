@@ -9,6 +9,7 @@ import android.widget.Spinner;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.TileOverlay;
@@ -127,9 +128,9 @@ public class MapsActivity extends FragmentActivity {
      */
     private void setUpMap() {
         // Add weather tile
-        tileOver = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(createTilePovider()));
+        //tileOver = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(createTilePovider()));
 
-        //tileOver = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(createTransparentTileProvider()));
+        tileOver = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(createTransparentTileProvider()));
     }
 
     private TileProvider createTransparentTileProvider() {
